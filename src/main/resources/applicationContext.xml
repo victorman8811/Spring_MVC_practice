@@ -15,7 +15,7 @@
 
     <mvc:annotation-driven />
     <context:annotation-config/>
-    <context:component-scan base-package="com.systex.mvc" />
+<!--    <context:component-scan base-package="com.systex.mvc.*" />-->
     <mvc:default-servlet-handler />
 
 
@@ -38,7 +38,6 @@
             <props>
                 <prop key="hibernate.dialect">org.hibernate.dialect.PostgreSQL95Dialect</prop> <!--設定dialect來表示將使用哪一種資料庫適用的語句操作-->
                 <prop key="hibernate.show_sql">true</prop>  <!--show_sql被設定為true，表示在執行資料庫存取動作時顯示Hibernate所生成、使用的SQL語法-->
-                <prop key="javax.persistence.validation.mode">none</prop>
             </props>
         </property>
     </bean>

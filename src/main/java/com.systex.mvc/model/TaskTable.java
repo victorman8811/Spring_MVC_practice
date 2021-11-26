@@ -1,17 +1,26 @@
 package com.systex.mvc.model;
 
-public class TaskTable {
+import javax.persistence.*;
+import java.io.Serializable;
 
-    int seq;
-    String name;
+@Entity
+@Table(name = "task_table")
+public class TaskTable implements Serializable {
+
+    @Id
+    @SequenceGenerator(name = "task_seq")
+    @Column(name = "task_seq")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    int task_seq;
+
+    @Column(name = "task_name", length = 255)
+    String task_name;
+
+    @Column(name = "description", length = 255)
     String description;
 
-    public void setSeq(int data) {
-        seq = data;
-    }
-
     public void setName(String data) {
-        name = data;
+        task_name = data;
     }
 
     public void setDescription(String data) {
@@ -19,11 +28,11 @@ public class TaskTable {
     }
 
     public int getSeq() {
-        return seq;
+        return task_seq;
     }
 
     public String getName() {
-        return name;
+        return task_name;
     }
 
     public String getDescription() {
