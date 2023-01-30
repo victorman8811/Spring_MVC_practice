@@ -22,8 +22,8 @@
     <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="driverClassName" value="org.postgresql.Driver" />
         <property name="url" value="jdbc:postgresql://localhost:5432/postgres" />
-        <property name="username" value="postgres" />
-        <property name="password" value="victor8811" />
+        <property name="username" value="your username" />
+        <property name="password" value="your password" />
     </bean>
 
     <bean id="sessionFactory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
